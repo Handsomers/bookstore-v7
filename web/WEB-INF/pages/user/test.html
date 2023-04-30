@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //目标字符串1
+    var targetStr01 = 'Hello\nWorld!';
+    //目标字符串2
+    var targetStr02 = 'Hello';
+
+    //匹配以'Hello'结尾的正则表达式，没有使用多行匹配
+    var reg = /Hello$/;
+    console.log(reg.test(targetStr01));//false
+
+    console.log(reg.test(targetStr02));//true
+</script>
+</body>
+</html>

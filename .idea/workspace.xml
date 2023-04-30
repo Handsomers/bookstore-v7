@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="bookstore-v7:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7bd01ecb-cb14-459f-acb4-951ea27727da" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="bookstore-v7" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="22iWCCtBFhDAigSDDJKd0fYlIig" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\59731\Desktop\图像处理作业\实训\bookstore-v7\web\WEB-INF\pages\order" />
+      <recent name="C:\Users\59731\Desktop\图像处理作业\实训\bookstore-v7\web\WEB-INF\pages\admin" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.481">
+    <configuration name="AdminRegist.doRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore-v7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nick.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nick.test" />
+      <option name="MAIN_CLASS_NAME" value="com.nick.test.AdminRegist" />
+      <option name="METHOD_NAME" value="doRegister" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TeseOrderDao.testList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore-v7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nick.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nick.test" />
+      <option name="MAIN_CLASS_NAME" value="com.nick.test.TeseOrderDao" />
+      <option name="METHOD_NAME" value="testList" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAdminDao" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore-v7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nick.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nick.test" />
+      <option name="MAIN_CLASS_NAME" value="com.nick.test.TestAdminDao" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAdminDao.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bookstore-v7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.nick.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.nick.test" />
+      <option name="MAIN_CLASS_NAME" value="com.nick.test.TestAdminDao" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.481" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.481" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/bookstore/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="bookstore-v7:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/bookstore" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_bookstore-v7" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="64357" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="bookstore-v7:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.TestAdminDao.Test" />
+      <item itemvalue="JUnit.AdminRegist.doRegister" />
+      <item itemvalue="JUnit.TestAdminDao" />
+      <item itemvalue="JUnit.TeseOrderDao.testList" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.481" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AdminRegist.doRegister" />
+        <item itemvalue="JUnit.TeseOrderDao.testList" />
+        <item itemvalue="JUnit.TestAdminDao.Test" />
+        <item itemvalue="JUnit.TestAdminDao" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7bd01ecb-cb14-459f-acb4-951ea27727da" name="Default Changelist" comment="" />
+      <created>1640320757329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640320757329</updated>
+      <workItem from="1640320760843" duration="7719000" />
+      <workItem from="1640354364661" duration="2354000" />
+      <workItem from="1640483642743" duration="13388000" />
+      <workItem from="1640506541816" duration="49000" />
+      <workItem from="1640584572741" duration="5750000" />
+      <workItem from="1640591330647" duration="1688000" />
+      <workItem from="1640653969748" duration="10653000" />
+      <workItem from="1640670178754" duration="1971000" />
+      <workItem from="1640676089303" duration="2421000" />
+      <workItem from="1640703180774" duration="5261000" />
+      <workItem from="1640876001628" duration="2117000" />
+      <workItem from="1640920124043" duration="638000" />
+      <workItem from="1641286897604" duration="29000" />
+      <workItem from="1641287752955" duration="371000" />
+      <workItem from="1672096742670" duration="549000" />
+      <workItem from="1677423826614" duration="988000" />
+      <workItem from="1678027306811" duration="1235000" />
+      <workItem from="1678071641885" duration="12000" />
+      <workItem from="1678362720075" duration="868000" />
+      <workItem from="1678363944109" duration="2076000" />
+      <workItem from="1678690541118" duration="1201000" />
+      <workItem from="1679229182500" duration="3771000" />
+      <workItem from="1679315899517" duration="166000" />
+      <workItem from="1679491756124" duration="768000" />
+      <workItem from="1679497412844" duration="1376000" />
+      <workItem from="1679626261943" duration="7000" />
+      <workItem from="1679626303752" duration="21000" />
+      <workItem from="1681224717319" duration="1228000" />
+      <workItem from="1681300219769" duration="1826000" />
+      <workItem from="1681461938799" duration="3580000" />
+      <workItem from="1681481087135" duration="1074000" />
+      <workItem from="1681612156388" duration="669000" />
+      <workItem from="1681613635904" duration="744000" />
+      <workItem from="1682387731143" duration="106000" />
+      <workItem from="1682820754080" duration="754000" />
+      <workItem from="1682821600959" duration="1440000" />
+      <workItem from="1682823143106" duration="2601000" />
+      <workItem from="1682868301942" duration="649000" />
+      <workItem from="1682869066238" duration="1296000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+  </component>
+</project>

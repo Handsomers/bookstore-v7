@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <base th:href="@{/}" href="/bookstore/"/>
+
+    <title>会员登录页面</title>
+    <link type="text/css" rel="stylesheet" href="static/css/style.css" />
+    <script src="static/script/vue.js"></script>
+  </head>
+  <body>
+    <div id="login_header">
+      <a href="index.html">
+        <img class="logo_img" alt="" src="static/img/logo.gif" />
+      </a>
+    </div>
+
+    <!--Vue的作用范围：开始-->
+    <div class="login_banner" id="app">
+      <div id="l_content">
+        <span class="login_word">欢迎登录</span>
+      </div>
+
+      <div id="content">
+        <div class="login_form">
+          <div class="login_box">
+            <div class="tit">
+              <h1>尊敬的会员</h1>
+            </div>
+            <div class="msg_cont">
+              <b></b>
+              <span class="errorMsg" v-text="errorMessage">请输入用户名和密码</span>
+            </div>
+            <div class="form">
+<!--              <form action="pages/user/login_success.html">-->
+<!--              <form action="login" method="post">-->
+            <form action="user" method="post">
+
+              <input type="hidden" name="method" value="doLogin"/>
+                <label>用户名称：</label>
+                <input
+                  class="itxt"
+                  type="text"
+                  placeholder="请输入用户名"
+                  autocomplete="off"
+                  tabindex="1"
+                  name="userName"
+                  id="userName"
+                  v-model="userName"
+                />
+                <br />
+                <br />
+                <label>用户密码：</label>
+                <input
+                  class="itxt"
+                  type="password"
+                  placeholder="请输入密码"
+                  autocomplete="off"
+                  tabindex="1"
+                  name="userPwd"
+                  id="userPwd"
+                  v-model="userPwd"
+                />
+                <br />
+                <br />
+                <input type="submit" value="登录" id="sub_btn" @click="checkLogin()"/>
+              </form>
+              <div class="tit">
+                  <a href="user?method=toRegisterPage">立即注册</a>
+
+                  <!--                <a href="pages/user/regist.html">立即注册</a>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<!--    Vue的作用范围：结束-->
+
+  <script>
+    var vue = new Vue({
+      "el":"#app",
+      "data":{
+        "userName":"[[${param.userName}]]",
+        "userPwd":"",
+        "errorMessage":"[[${errorMsg}]]"
+      },
+      "methods":{
+        checkLogin(){
+          //校验用户名和密码是否为空
+          if(this.userName==""){
+            this.errorMessage="用户名不能为空"
+            // alert("用户名不能为空")
+            event.preventDefault()
+            return
+          }else if(this.password == ""){
+            this.errorMessage="密码不能为空"
+            // alert("密码不能为空")
+            event.preventDefault()
+            return;
+          }
+        }
+      }
+    });
+  </script>
+    <div id="bottom">
+      <span>
+        Nick's BookStore.Copyright &copy;2021
+      </span>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<base th:href="@{/}" href="/bookstore/" />
+  <head>
+    <meta charset="UTF-8" />
+    <title>会员注册页面</title>
+    <base th:href="@{/}" href="/bookstore/"/>
+    <link type="text/css" rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/register.css" />
+    <script src="static/script/vue.js"></script>
+    <script type="text/javascript" src="static/script/axios.js"></script>
+    <style type="text/css">
+      .login_form {
+        height: 420px;
+        margin-top: 25px;
+      }
+      .message{
+        font-size: 12px;
+        color: red;
+        margin: 2px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login_header">
+      <a href="index.html">
+<!--        <img class="logo_img" alt="" src="static/img/logo.gif" />-->
+        <img class="logo_img" alt="" src="static/img/logo.gif" />
+      </a>
+    </div>
+    <!-- vue的作⽤范围：开始 -->
+    <div class="login_banner" id="app">
+      <div class="register_form">
+        <h1>注册会员</h1>
+<!--        在注册会员标签下加入错误回显div-->
+        <div class="msg_cont">
+          <b></b>
+          <span class="errorMsg" th:text="${errorMsg}"></span>
+        </div>
+        <form id="registerForm" action="user" method="post">
+          <input type="hidden" name="method" value="doRegister" />
+          <div class="form-item">
+            <div>
+              <label>⽤户名称:</label>
+              <input v-model="user.username" type="text" placeholder="请输⼊⽤户名" name="username"
+                     @change="checkUsername()"/>
+            </div>
+            <span class="message" v-text="usernameError"></span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>⽤户密码:</label>
+              <input v-model="user.userPwd" type="password" placeholder="请输⼊密码" name="userPwd"
+                     @change="checkPassword()"/>
+            </div>
+            <span class="message" v-text="passwordError"></span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>确认密码:</label>
+              <input v-model="user.passwordConfirm" type="password" placeholder="请输⼊确认密码" @change="checkPasswordConfirm()"/>
+            </div>
+            <span class="message" v-text="passwordConfirmError"></span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>⽤户邮箱:</label>
+              <input v-model="user.email" type="text" placeholder="请输⼊邮箱" name="email"
+                     @change="checkEmail()"/>
+            </div>
+            <span class="message" v-text="emailError"></span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>验证码:</label>
+              <div class="verify">
+                <input type="text" placeholder="" name="checkCode"/>
+                <img src="kaptcha" @click="changeCodeImg()" alt="" />
+              </div>
+            </div>
+            <span class="message"></span>
+          </div>
+          <button class="btn" @click="checkRegister()">注册</button>
+<!--          <button type="submit">注册</button>-->
+        </form>
+      </div>
+    </div>
+    <!-- vue的作⽤范围：结束 -->
+    <div id="bottom">
+      <span>
+        Nick's Bookstore.Copyright &copy;2021
+      </span>
+    </div>
+  <script>
+    var vue = new Vue({
+      "el":"#app",
+      "data":{
+        "user":{
+          "username":"[[${param.userName}]]",
+          "userPwd":"",
+          "passwordConfirm":"",
+          "email":"[[${param.email}]]"
+        },
+        "usernameError":"",
+        "passwordError":"",
+        "passwordConfirmError":"",
+        "emailError":"",
+        "usernameFlag":false,
+        "passwordFlag":false,
+        "passwordConfirmFlag":false,
+        "emailFlag":false
+      },
+      "methods":{
+        checkUsername(){
+          //校验⽤户输⼊的⽤户名是否符合规则
+          //⽤户名的要求：⽤户名必须是5-12位的数字和字符组成
+          var reg = /^[0-9a-zA-Z]{5,12}$/
+          //⽤正则表达式校验⽤户名
+          if(!reg.test(this.user.username)){
+            //⽤户名不符合规则
+            this.usernameError = "⽤户名必须位5-12位的字⺟或数字组合"
+            this.usernameFlag = false
+          } else {
+            //用户名格式正确，接下来时异步检验用户名是否可用
+            axios({
+              "method":"POST",
+              "url":"user",
+              "params":{
+                "method":"checkUsername",
+                "username":this.user.username
+              }
+            }).then(response=>{
+              //1、判断响应的jason中的flag
+              if(!response.data.flag){
+                //用户名不可用
+              this.usernameError = response.data.message
+            } else {
+                //用户名可用
+              this.usernameError=""
+            }
+            this.usernameFlag = response.data.flag
+            })
+          }
+        },
+        checkPassword(){
+          var reg = /^\w{8,16}$/
+          if(!reg.test(this.user.userPwd)){
+            this.passwordError = "密码必须位8-16位的数字、字⺟以及下划线的组合"
+            this.passwordFlag = false
+          } else {
+            this.passwordError = ""
+            this.passwordFlag = true
+          }
+        },
+        checkPasswordConfirm(){
+          if(this.user.passwordConfirm != this.user.userPwd){
+            this.passwordConfirmError = "确认密码和密码必须⼀致"
+            this.passwordConfirmFlag = false
+          } else {
+            this.passwordConfirmError = ""
+            this.passwordConfirmFlag = true
+          }
+        },
+        checkEmail(){
+          var reg = /^[a-zA-Z0-9_.-]+@([a-zA-Z0-9-]+[.]{1})+[a-zA-Z]+$/
+          if (!reg.test(this.user.email)) {
+            this.emailError = "邮箱格式不正确"
+            this.emailFlag = false
+          }else {
+            this.emailError = ""
+            this.emailFlag = true
+          }
+        },
+        checkRegister(){
+          //校验那些flag是否都为true
+          if (!(this.usernameFlag && this.passwordFlag && this.passwordConfirmFlag &&
+                  this.emailFlag)) {
+            //如果有⼀个flag是false，那么表单不能提交
+            event.preventDefault()
+          }
+        },
+        changeCodeImg(){
+          //切换验证码图片：重新设置当前图片的src
+          //event.target就表示获取当前事件所在的标签
+          event.target.src = "kaptcha"
+        }
+      }
+    });
+  </script>
+  </body>
+</html>

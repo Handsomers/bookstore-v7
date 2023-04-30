@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<base th:href="@{/}" href="/bookstore/"/>
+<title>后台管理</title>
+<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+<style type="text/css">
+	h1 {
+		text-align: center;
+		margin-top: 200px;
+	}
+</style>
+</head>
+<body>
+	
+	<div id="header">
+			<img class="logo_img" alt="" src="static/img/logo.gif" >
+			<span class="wel_word">后台管理系统</span>
+			<div>
+<!--				<a href="book_manager.html">图书管理</a>-->
+				<a href="protected/bookManager?method=showBookList">图书管理</a>
+<!--				<a href="order_manager.html">订单管理</a>-->
+				<a href="protected/orderClient?method=showOrderList">订单管理</a>
+<!--				<a href="index.html">返回商城</a>-->
+				<a href="index.html">返回商城</a>
+			</div>
+	</div>
+	
+	<div id="main">
+		<h1>欢迎管理员进入后台管理系统</h1>
+	</div>
+	
+	<div id="bottom">
+		<span>
+			Nick's Bookstore.Copyright &copy;2021
+		</span>
+	</div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base th:href="@{/}" href="/bookstore/"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="static/css/minireset.css" />
+    <link rel="stylesheet" href="static/css/common.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/cart.css" />
+    <link rel="stylesheet" href="static/css/bookManger.css" />
+    <link rel="stylesheet" href="static/css/register.css" />
+    <link rel="stylesheet" href="static/css/book_edit.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="w">
+        <div class="header-left">
+          <a href="index.html">
+            <img src="static/img/logo.gif" alt=""
+          /></a>
+          <h1>编辑图书</h1>
+        </div>
+        <div class="header-right">
+          <a href="protected/bookManager?methoad=showBookList" class="order">图书管理</a>
+<!--          <a href="pages/book_manager.html" class="order">图书管理</a>-->
+          <a href="protected/bookManager?method=orderManger" class="destory">订单管理</a>
+<!--          <a href="pages/order_manager.html" class="destory">订单管理</a>-->
+          <a href="index.html" class="gohome">返回商城</a>
+        </div>
+      </div>
+    </div>
+    <div class="login_banner">
+      <div class="register_form">
+<!--        修改图书的表单-->
+        <form action="protected/orderClient?method=saveOrUpdateOrder" method="post" th:if="${order !=null}">
+          <div class="form-item">
+<!--              使用隐藏域绑定bookId-->
+            <input type="hidden" name="orderId" th:value="${order.orderId}" />
+            <div>
+              <label>订单编号:</label>
+              <input type="text" th:value="${order.orderSequence}" placeholder="请输入编号" name="orderSequence"/>
+            </div>
+            <span class="errMess" style="visibility: hidden;" >请输入正确的编号</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>创建时间:</label>
+              <input type="text" th:value="${order.createTime}" placeholder="请输入创建时间" name="createTime"/>
+            </div>
+            <span class="errMess">请输入正确时间</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>金额:</label>
+              <input type="number" th:value="${order.totalAmount}" placeholder="请输入金额" name="totalAmount" />
+            </div>
+            <span class="errMess">请输入正确金额</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>状态:</label>
+              <input type="number" th:value="${order.orderStatus}" placeholder="0表示未发货，1表示已发货，2表示已收货" name="orderStatus"/>
+            </div>
+            <span class="errMess">0表示未发货，1表示已发货，2表示已收货</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>订单数量:</label>
+              <input type="number" th:value="${order.totalCount}" placeholder="请输入订单的数量" name="totalCount"/>
+            </div>
+            <span class="errMess">请输入正确的订单数量</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>用户id:</label>
+              <input type="number" th:value="${order.userId}" placeholder="请输入用户id" name="userId"/>
+            </div>
+            <span class="errMess">请输入正确用户id</span>
+          </div>
+          <button type="submit" class="btn">提交</button>
+        </form>
+
+        <!--这是添加订单的表单-->
+        <form action="protected/orderClient?method=saveOrUpdateOrder" method="post" th:unless="${order !=null}">
+          <div class="form-item">
+            <div>
+              <label>订单编号:</label>
+              <input type="text" placeholder="请输入编号" name="orderSequence"/>
+            </div>
+            <span class="errMess" style="visibility: hidden;" >请输入正确的编号</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>创建时间:</label>
+              <input type="text" placeholder="请输入创建时间" name="createTime"/>
+            </div>
+            <span class="errMess">请输入正确时间</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>金额:</label>
+              <input type="number" placeholder="请输入金额" name="totalAmount" />
+            </div>
+            <span class="errMess">请输入正确金额</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>状态:</label>
+              <input type="text" placeholder="0表示未发货，1表示已发货，2表示已收货" name="orderStatus"/>
+            </div>
+            <span class="errMess">0表示未发货，1表示已发货，2表示已收货</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>订单数量:</label>
+              <input type="number" placeholder="请输入订单的数量" name="totalCount"/>
+            </div>
+            <span class="errMess">请输入正确的订单数量</span>
+          </div>
+          <div class="form-item">
+            <div>
+              <label>用户id:</label>
+              <input type="text"  placeholder="请输入用户id" name="userId"/>
+            </div>
+            <span class="errMess">请输入正确用户id</span>
+          </div>
+          <button type="submit" class="btn">提交</button>
+        </form>
+
+      </div>
+    </div>
+    <div class="bottom">
+      Nick's Bookstore.Copyright ©2021
+    </div>
+  </body>
+</html>

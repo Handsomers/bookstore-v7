@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<base th:href="@{/}" href="/bookstore/"/>
+<title>会员注册页面</title>
+<link type="text/css" rel="stylesheet" href="static/css/style.css" >
+<style type="text/css">
+	h1 {
+		text-align: center;
+		margin-top: 200px;
+	}
+	
+	h1 a {
+		color:red;
+	}
+</style>
+</head>
+<body>
+		<div id="header">
+				<a href="index.html">
+					<img class="logo_img" alt="" src="static/img/logo.gif" />
+				</a>
+				<div>
+					<span>欢迎<span class="um_span" th:text="${session.loginUser.userName}">Nick</span>光临书城</span>
+					<a href="pages/order/order.html">我的订单</a>
+					<a href="user?method=logout">注销</a>&nbsp;&nbsp;
+<!--					<a href="index.html">注销</a>&nbsp;&nbsp;-->
+					<a href="index.html">返回</a>
+				</div>
+		</div>
+		
+		<div id="main">
+		
+			<h1>欢迎回来 <a href="index.html">转到主页</a></h1>
+	
+		</div>
+		
+		<div id="bottom">
+			<span>
+				Nick's Bookstore.Copyright &copy;2021
+			</span>
+		</div>
+</body>
+</html>
